@@ -221,18 +221,53 @@
     const showcase = book3d && book3d.closest('.book-outer');
 
     if (showcase) {
+      let currentRotY = -28, currentRotX = 5;
+      let targetRotY  = -28, targetRotX  = 5;
+      let rafId = null;
+      let isHovering = false;
+
+      function lerp(a, b, t) { return a + (b - a) * t; }
+
+      function tickBook() {
+        currentRotY = lerp(currentRotY, targetRotY, 0.07);
+        currentRotX = lerp(currentRotX, targetRotX, 0.07);
+        book3d.style.transform = `rotateY(${currentRotY}deg) rotateX(${currentRotX}deg)`;
+
+        const stillMoving =
+          Math.abs(currentRotY - targetRotY) > 0.01 ||
+          Math.abs(currentRotX - targetRotX) > 0.01;
+
+        if (stillMoving || isHovering) {
+          rafId = requestAnimationFrame(tickBook);
+        } else {
+          // Settled back to resting — hand off to CSS animation
+          book3d.style.transform = '';
+          book3d.style.animation = 'bookFloat 7s ease-in-out infinite';
+          rafId = null;
+        }
+      }
+
       showcase.addEventListener('mousemove', e => {
         const r  = book3d.getBoundingClientRect();
         const cx = r.left + r.width  / 2;
         const cy = r.top  + r.height / 2;
         const dx = (e.clientX - cx) / (r.width  / 2);
         const dy = (e.clientY - cy) / (r.height / 2);
-        book3d.style.animation = 'none';
-        book3d.style.transform = `rotateY(${-28 + dx * 22}deg) rotateX(${4 - dy * 12}deg)`;
+
+        targetRotY = -28 + dx * 22;
+        targetRotX =   5 - dy * 12;
+
+        if (!isHovering) {
+          isHovering = true;
+          book3d.style.animation = 'none';
+          if (!rafId) rafId = requestAnimationFrame(tickBook);
+        }
       });
 
       showcase.addEventListener('mouseleave', () => {
-        book3d.style.animation = 'bookFloat 7s ease-in-out infinite';
-        book3d.style.transform = '';
+        isHovering = false;
+        targetRotY = -28;
+        targetRotX = 5;
+        if (!rafId) rafId = requestAnimationFrame(tickBook);
       });
     }
