@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guiltythree — Shadow Slave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- GRAIN -->
+  <div class="grain"></div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- PARTICLES -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">
+      <img src="https://images.squarespace-cdn.com/content/v1/69a724a3948e517059cbeae1/1772561575858-ASMU4Z4LHBMAVZBZUDHX/WebLogo2.png" alt="Guiltythree" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#book">The Book</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ══ HERO ══════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-vignette"></div>
+
+      <span class="hero-eyebrow">Shadow Slave &nbsp;·&nbsp; Book One &nbsp;·&nbsp; A Dark Fantasy Epic</span>
+
+      <h1 class="hero-title">
+        <span class="line-ghost">Available</span>
+        <span class="line-blood">In Print</span>
+        <span class="line-sub">For the First Time</span>
+      </h1>
+
+      <div class="hero-divider"></div>
+
+      <div class="hero-ctas">
+        <a href="https://www.barnesandnoble.com/w/shadow-slave-book-1-guiltythree/1149543555" target="_blank" rel="noopener" class="btn btn-primary">Preorder at Barnes &amp; Noble</a>
+        <a href="https://www.amazon.com/Shadow-Slave-Book-Child-Shadows/dp/1638494193" target="_blank" rel="noopener" class="btn btn-secondary">Preorder at Amazon</a>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ══ BOOK ═══════════════════════════════════════════════ -->
+    <section class="book-section" id="book">
+
+      <div class="book-section-text">
+        <div class="reveal">
+          <span class="section-label">The Novel</span>
+          <h2 class="book-section-title">Shadow<br><span>Slave</span></h2>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <p class="book-section-desc">
+            Born from one of the web's most beloved dark fantasy series. A story of
+            survival, power, and the shadows that dwell within every soul —
+            now immortalized in print for the very first time.
+          </p>
+          <div class="hero-ctas" style="justify-content:flex-start;">
+            <a href="https://www.amazon.com/Shadow-Slave-Book-Child-Shadows/dp/1638494193" target="_blank" rel="noopener" class="btn btn-primary">Preorder Now</a>
+            <a href="https://www.barnesandnoble.com/w/shadow-slave-book-1-guiltythree/1149543555" target="_blank" rel="noopener" class="btn btn-outline">Barnes &amp; Noble</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-showcase reveal reveal-delay-2">
+        <div class="book-outer">
+          <span class="book-badge">Book One</span>
+          <div class="book-scene">
+            <div class="book-wrap">
+              <div class="book-glow"></div>
+              <div class="book-3d" id="book3d">
+                <div class="book-top-face"></div>
+                <div class="book-spine-el">
+                  <span class="book-spine-text">Shadow Slave &nbsp;·&nbsp; Guiltythree</span>
+                </div>
+                <div class="book-cover"></div>
+                <div class="book-pages"></div>
+                <div class="book-back"></div>
+              </div>
+              <div class="book-shadow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ══ QUOTE ══════════════════════════════════════════════ -->
+    <section class="quote-section" id="quote">
+      <div class="reveal">
+        <span class="section-label">Praise</span>
+        <div class="quote-inner">
+          <span class="quote-bg-text">Cradle</span>
+          <span class="quote-mark">"</span>
+          <blockquote class="quote-text">One of my favorite new reads!</blockquote>
+          <cite class="quote-attribution">Will Wight &nbsp;·&nbsp; NYT Bestselling Author of Cradle</cite>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornamental-divider reveal">
+      <span class="divider-glyph">◆ &nbsp; ◆ &nbsp; ◆</span>
+    </div>
+
+    <!-- ══ ABOUT ══════════════════════════════════════════════ -->
+    <section class="about-section" id="about">
+      <div class="about-accent-line"></div>
+
+      <div class="about-left">
+        <div class="reveal">
+          <span class="section-label">The Author</span>
+          <span class="heading-accent"></span>
+          <h2 class="about-heading">Guiltythree</h2>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <p class="about-body">
+            A veteran game writer and narrative designer who stepped away from
+            the industry to pursue a singular vision. Shadow Slave began as
+            a web serial and became a phenomenon — amassing hundreds of millions
+            of views and earning international recognition across multiple awards.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-number" data-count="100" data-suffix="M+">100M+</div>
+              <div class="stat-label">Views Worldwide</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" data-static="true">Multi</div>
+              <div class="stat-label">International Awards</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" data-count="65" data-suffix="K+">65K+</div>
+              <div class="stat-label">Community Members</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" data-static="true">#1</div>
+              <div class="stat-label">Dark Fantasy Web Serial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <div class="about-cards">
+          <div class="about-card reveal reveal-delay-1">
+            <div class="card-shimmer"></div>
+            <div class="about-card-title">International Recognition</div>
+            <div class="about-card-desc">Multiple international awards for excellence in dark fantasy storytelling and web fiction across global markets.</div>
+          </div>
+          <div class="about-card reveal reveal-delay-2">
+            <div class="card-shimmer"></div>
+            <div class="about-card-title">Game Writing Heritage</div>
+            <div class="about-card-desc">Years of professional narrative design inform the intricate world-building and progression systems at the heart of Shadow Slave.</div>
+          </div>
+          <div class="about-card reveal reveal-delay-3">
+            <div class="card-shimmer"></div>
+            <div class="about-card-title">Web Fiction Phenomenon</div>
+            <div class="about-card-desc">Hundreds of millions of readers discovered Shadow Slave through web serialization — a genuine grassroots literary event.</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="ornamental-divider reveal">
+      <span class="divider-glyph">◆ &nbsp; ◆ &nbsp; ◆</span>
+    </div>
+
+    <!-- ══ COMMUNITY ══════════════════════════════════════════ -->
+    <section class="community-section" id="community">
+      <div class="reveal">
+        <div class="community-number-wrap">
+          <div class="community-ring"></div>
+          <div class="community-ring"></div>
+          <div class="community-ring"></div>
+          <span class="community-big" data-count="65" data-suffix="K+">65<em>K+</em></span>
+        </div>
+        <h2 class="community-heading">Souls Already Gathered</h2>
+        <p class="community-desc">
+          Join the Discord — where readers, theorists, and fanatics dissect every
+          chapter and await each new update together.
+        </p>
+        <a href="https://discord.gg/guiltythree" target="_blank" rel="noopener" class="btn btn-primary">Join the Discord</a>
+      </div>
+    </section>
+
+    <!-- ══ NEWSLETTER ═════════════════════════════════════════ -->
+    <section class="email-section" id="newsletter">
+      <div class="reveal">
+        <span class="section-label">Stay Informed</span>
+        <h2 class="email-heading">Be the First to Know</h2>
+        <p class="email-subtext">Release dates, exclusive content, and dispatches from the world of Shadow Slave.</p>
+        <form class="email-form" onsubmit="return false;">
+          <input type="email" class="email-input" placeholder="Your email address…">
+          <button type="submit" class="email-submit">Enter</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="https://images.squarespace-cdn.com/content/v1/69a724a3948e517059cbeae1/1772561575858-ASMU4Z4LHBMAVZBZUDHX/WebLogo2.png" alt="Guiltythree" style="height:28px;width:auto;opacity:0.45;filter:brightness(1.1);">
+    </div>
+    <ul class="footer-links">
+      <li><a href="#book">The Book</a></li>
+      <li><a href="#community">Discord</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
+    <div class="footer-text">© 2026 Guiltythree &nbsp;·&nbsp; All Rights Reserved</div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
